@@ -10,11 +10,11 @@ List of tasks:
 
 Feel free to edit the list of tasks. 
 
-Workflows:
+# Analysis done
 
-# Position of the beam center for various apertures
-
-1. Select images (taken from the same folder)
-2. calculate median of images (remove gammas)
-3. retrieve various horizontal and vertical profiles using dedicated *profile* notebook from imaging suite
-4. develop algorithm that determines the value of the center of the profile
+1. For runs with more than 1 image, images were combined using median to improve statistics and remove gammas. 
+The neutron imaging notebook called 'combine_all_images_selected' was used to combine the images. (check the notebook **step1_combine_images**)
+2. The optimum profile width to use was estimated using notebook **calculate_center_of_beam_vertical_using_different_profile_width**
+3. Calculation of beam center for each aperture. Check notebook **calculate_horizontal_and_vertical_center_of_beam_for_all_apertures**
+3. Study of beam center stability after several shutter closing/opening. Check notebook **calculate_beam_center_for_300deg_vs_shutter_cycles**
+4. Calculate real space beam center (in mm) and the pixel size (using 300deg data sets) Check notebook **calculate_horizontal_and_vertical_center_of_beam_300deg**
